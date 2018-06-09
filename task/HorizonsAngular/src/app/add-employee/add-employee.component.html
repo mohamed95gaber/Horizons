@@ -1,0 +1,83 @@
+<!-- <div class="modal fade" id="editmodal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-lg" role="document" style="width:60%">
+    <div class="modal-body">
+      <form #f="ngForm" (ngSubmit)="editShow(f)" novalidate>
+        <div class="col-sm-12 col-md-offset-1">
+          <div class="featured-box featured-box-primary align-left mt-xlg">
+            <div class="box-content">
+              <h4 class="heading-primary text-uppercase mb-md">Edit Employee</h4>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="title">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-sm" name="title" [(ngModel)]="name" placeholder="{{employee.name}}" id="title"
+                    required pattern="[A-Za]{2}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">deptName</label>
+                <div class="col-sm-10">
+                  <input type="string" class="form-control input-sm" name="time" [(ngModel)]="deptName" placeholder="{{employee.deptName}}"
+                    id="w1-username" required pattern="[A-Za-z]{3}">
+                </div>
+              </div>
+              <div class="form-group">
+                <label class="col-sm-2 control-label" for="w1-username">birthDate</label>
+                <div class="col-sm-10">
+                  <input type="text" class="form-control input-sm" name="location" [(ngModel)]="birthDate" placeholder="{{employee.birthDate}}"
+                    id="w1-username" required pattern="[A-Za-z]{3}">
+                </div>
+              </div>
+              <div class="col-md-3 ">
+                <input type="button" (click)="cancelShow()" value="Cancel" class="btn btn-default pull-right mb-xl" data-dismiss="modal">
+                <input (click)="editShow(f)" data-dismiss="modal" type="submit" value="Edit" class="btn btn-primary pull-left mb-xl" data-loading-text="Loading...">
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div> -->
+
+
+
+<div class="modal fade" id="addmodal" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title">Add Employee</h4>
+        </div>
+        <br/>
+        <form #f="ngForm"  novalidate>
+          <div class="form-group x">
+            <label  class="control-label t">First Name:</label>
+            <input type="text" class="form-control s" name="firstName" [(ngModel)]="firstName" placeholder="first name">
+          </div>
+          <div class="form-group x">
+              <label  class="control-label t">Last Name:</label>
+              <input type="text" class="form-control s" name="lastName" [(ngModel)]="lastName" placeholder="last name">
+            </div>
+          <div class="form-group x">
+            <label  class="control-label t">Department Name:</label>
+            <input type="text" class="form-control s" name="deptName" [(ngModel)]="deptName" placeholder="department name">
+          </div>
+          <div class="form-group x">
+            <label class="control-label t">BirthDate:</label>
+            <input type="text" class="form-control s" name="birthDate" [(ngModel)]="birthDate" placeholder="birthdate">
+          </div>
+  
+  
+  
+        </form>
+  
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary" (click)="addEmployee(f)" data-dismiss="modal">Add Employee</button>
+          <button type="button" class="btn btn-default"(click)="cancel()" data-dismiss="modal">Cancel</button>
+        </div>
+      </div>
+      <!-- /.modal-content -->
+    </div>
+    <!-- /.modal-dialog -->
+  </div>
+  <!-- /.modal -->

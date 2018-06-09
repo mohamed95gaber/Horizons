@@ -1,0 +1,43 @@
+
+
+
+
+<div class="modal fade" id="editmodal" tabindex="-1" role="dialog">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h4 class="modal-title">Edit Employee</h4>
+      </div>
+      <br/>
+      <form #f="ngForm"  novalidate>
+        <div class="form-group x">
+          <label  class="control-label t">First Name:</label>
+          <input type="text" class="form-control s" name="firstName" [(ngModel)]="firstName" placeholder="{{employee.firstName}}">
+        </div>
+        <div class="form-group x">
+            <label  class="control-label t">Last Name:</label>
+            <input type="text" class="form-control s" name="lastName" [(ngModel)]="lastName" placeholder="{{employee.lastName}}">
+          </div>
+        <div class="form-group x">
+          <label  class="control-label t">BirthDate:</label>
+          <input type="text" class="form-control s" name=" birthDate" [(ngModel)]="birthDate " placeholder="{{employee.birthDate}}">
+        </div>
+        <div class="form-group x">
+          <label class="control-label t">Department Name:</label>
+          <input type="text" class="form-control s" name="deptName" [(ngModel)]="deptName" placeholder="{{employee.deptName}}">
+        </div>
+
+
+
+      </form>
+
+      <div class="modal-footer">
+        <button type="button" class="btn btn-primary" (click)="editemployee(f)" data-dismiss="modal">Edit Employee</button>
+        <button type="button" class="btn btn-default" data-dismiss="modal" (click)="cancel()">Cancel</button>
+      </div>
+    </div>
+    <!-- /.modal-content -->
+  </div>
+  <!-- /.modal-dialog -->
+</div>
+<!-- /.modal -->

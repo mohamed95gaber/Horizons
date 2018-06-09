@@ -1,0 +1,41 @@
+<div class="container">
+  <h1>Employees List</h1>
+  <hr>
+  <a href="#" data-toggle="modal" data-target="#addmodal">
+    <i class="fa fa-plus r"></i>
+  </a>
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <th scope="col">first Name</th>
+        <th scope="col">last Name</th>        
+        <th scope="col">Department Name</th>
+        <th scope="col">BirthDate</th>
+        <th scope="col">Admin Controls</th>
+
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let employee of employees">
+        <td>{{employee.firstName}}</td>
+        <td>{{employee.lastName}}</td>        
+        <td>{{employee.deptName}}</td>
+        <td>{{employee.birthDate}}</td>
+        <td>
+          &nbsp;&nbsp;&nbsp;&nbsp;
+          <a  data-toggle="modal" data-target="#editmodal" href="#" (click)="edit(employee.id)">
+            <i class="fa fa-edit"></i>
+          </a>&nbsp;
+          <a  (click)="delete(employee.id)">
+            <i class="fa fa-trash"></i>
+          </a>
+        </td>
+
+      </tr>
+
+    </tbody>
+  </table>
+</div>
+
+<app-edit-employee (updemp)="editData($event)"  [employee]="employee"></app-edit-employee>
+<app-add-employee (nEmp)="add($event)"></app-add-employee>
